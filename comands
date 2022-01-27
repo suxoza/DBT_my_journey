@@ -1,0 +1,16 @@
+
+dbt test
+dbt --version
+dbt debug
+dbt run
+dbt init first_dbt_project
+dbt debug
+dbt docs generate
+dbt docs serve
+dbt source freshness
+dbt compile
+dbt ls --models state:new
+dbt run --tag:some_tag
+dbt run --tag:some_tag --exclude tag:excluded_tag
+dbt run --var "{'some': 'some2'}"
+
