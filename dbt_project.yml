@@ -49,3 +49,7 @@ vars:
   # The `platforms` variable is only accessible to resources in the my_dbt_project project
   staging:
     platforms: ['web', 'mobile']
+
+
+on-run-start: "insert into \"DEMO_DB\".\"PUBLIC\".\"for_dbt_logs\" (name) values ('start'); commit"
+on-run-end: "insert into \"DEMO_DB\".\"PUBLIC\".\"for_dbt_logs\" (name) values ('end'); commit"
