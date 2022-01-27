@@ -54,5 +54,8 @@ vars:
     platforms: ['web', 'mobile']
 
 
-on-run-start: "insert into \"DEMO_DB\".\"PUBLIC\".\"for_dbt_logs\" (name) values ('start'); commit"
-on-run-end: "insert into \"DEMO_DB\".\"PUBLIC\".\"for_dbt_logs\" (name) values ('end'); commit"
+# on-run-start: "insert into \"DEMO_DB\".\"PUBLIC\".\"for_dbt_logs\" (name) values ('start'); commit"
+# on-run-end: "insert into \"DEMO_DB\".\"PUBLIC\".\"for_dbt_logs\" (name) values ('end'); commit"
+
+on-run-start: "{{ add_hook('start') }}"
+on-run-end: "{{ add_hook('end') }}"
