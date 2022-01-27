@@ -5,7 +5,7 @@ models:
   - name: my_first_dbt_model
     description: " {{ doc('my_first_dbt_model_doc') }}"
     columns:
-      - name: id
+      - name: id 
         description: "The primary key for this table"
         tests:
           - unique

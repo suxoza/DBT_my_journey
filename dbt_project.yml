@@ -42,6 +42,7 @@ models:
       +schema: staging
       example:
         +materialized: table
+        +tags: custom_tag
         
 
 

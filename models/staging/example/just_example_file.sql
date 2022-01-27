@@ -8,4 +8,4 @@ final as (
     select *, current_date() as created_at from just_example_data
 )
 
-select * from final
+select * from final 
