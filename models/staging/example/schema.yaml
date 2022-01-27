@@ -5,6 +5,9 @@ sources:
     description: "sample description 2"
     database: snowflake_sample_data
     schema: TPCDS_SF10TCL
+
     tables:
       - name: store_sales
         description: "some description"
+        columns:
+          - name: created_at

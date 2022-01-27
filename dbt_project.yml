@@ -15,7 +15,7 @@ profile: 'snowflake'
 source-paths: ["models"]
 analysis-paths: ["analysis"]
 test-paths: ["tests"]
-data-paths: ["data"]
+data-paths: ["data" ]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
 

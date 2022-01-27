@@ -5,7 +5,7 @@ with just_example_data as (
 ),
 
 final as (
-    select * from just_example_data
+    select *, current_date() as created_at from just_example_data
 )
 
 select * from final

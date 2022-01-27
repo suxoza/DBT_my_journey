@@ -1,0 +1,22 @@
+version: 2
+
+sources:
+  - name: test_freshness
+    description: "sample description 2"
+    database: DEMO_DB
+    schema: STAGING
+
+    tables:
+      - name: my_first_dbt_model
+
+        freshness:
+          warn_after: {count: 12, period: minute}      
+          error_after: {count: 24, period: minute}
+          filter: datediff('day', created_at, current_timestamp) > 0
+        loaded_at_field: CAST(created_at AS TIMESTAMP)
+
+
+        description: "some description"
+        columns:
+          - name: id
+          - name: created_at
